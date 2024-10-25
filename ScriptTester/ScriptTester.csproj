@@ -1,0 +1,40 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net7.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+		<OutputPath>..\_Output</OutputPath>
+		<AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+		<DefineConstants>TRACE;DEBUG;LicenseAuthorize</DefineConstants>
+	</PropertyGroup>
+
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+		<OutputPath>..\_Output</OutputPath>
+		<AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Alternet.Studio.Common" Version="9.5.9" />
+		<PackageReference Include="Alternet.Studio.Common.Wpf" Version="9.5.9" />
+		<PackageReference Include="Alternet.Studio.Editor.Wpf" Version="9.5.9" />
+		<PackageReference Include="Alternet.Studio.FormDesigner.Common.Wpf" Version="9.5.9" />
+		<PackageReference Include="Alternet.Studio.FormDesigner.Wpf" Version="9.5.9" />
+		<PackageReference Include="Alternet.Studio.Editor.Common.Wpf" Version="9.5.9" />
+		<PackageReference Include="Alternet.Studio.Editor.Roslyn.Wpf" Version="9.5.9" />
+		<PackageReference Include="Alternet.Studio.FormDesigner.Integration.Wpf" Version="9.5.9" />
+		<PackageReference Include="Alternet.Studio.Scripter.Integration.Wpf" Version="9.5.9" />
+		<PackageReference Include="Alternet.Studio.Syntax" Version="9.5.9" />
+		<PackageReference Include="Alternet.Studio.Syntax.Parsers.Roslyn" Version="9.5.9" />
+		<PackageReference Include="Alternet.Studio.Scripter" Version="9.5.9" />
+		<PackageReference Include="Alternet.Studio.Scripter.Common" Version="9.5.9" />
+		<PackageReference Include="Alternet.Studio.Scripter.Debugger" Version="9.5.9" />
+		<PackageReference Include="Alternet.Studio.Scripter.Debugger.Common" Version="9.5.9" />
+		<PackageReference Include="Alternet.Studio.Scripter.Debugger.UI.Wpf" Version="9.5.9" />
+	</ItemGroup>
+</Project>

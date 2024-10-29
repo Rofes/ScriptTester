@@ -10,6 +10,8 @@ namespace ScriptTester
 	{
 		private DebuggerWindow _debuggerWindow;
 
+		private readonly ScriptRunner _scriptRunner = new ScriptRunner();
+
 		public MainWindow()
 		{
 			InitializeComponent();
@@ -25,7 +27,7 @@ namespace ScriptTester
 
 		private void Test_Click(object sender, RoutedEventArgs e)
 		{
-			_debuggerWindow.Test();
+			_scriptRunner.Test();
 		}
 	}
 }

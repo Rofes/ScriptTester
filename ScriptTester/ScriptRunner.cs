@@ -8,7 +8,7 @@ namespace ScriptTester;
 
 public class ScriptRunner
 {
-		private static readonly string StartupProjectFileSubPath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"..\ScriptLib\ScriptLib.csproj");
+	private static readonly string StartupProjectFileSubPath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"..\ScriptLib\ScriptLib.csproj");
 	private readonly ScriptRun _scriptRun = new();
 	private DotNetProject Project { get; } = new();
 
@@ -16,6 +16,7 @@ public class ScriptRunner
 	{
 		_scriptRun.ScriptMode = ScriptMode.Debug;
 		_scriptRun.ScriptHost.GenerateModulesOnDisk = false;
+		_scriptRun.ScriptSource.WithDefaultReferences(ScriptTechnologyEnvironment.Wpf);
 		OpenProject(StartupProjectFileSubPath);
 	}
 	private void OpenProject(string projectFilePath)

@@ -7,6 +7,7 @@
 		<Copyright>Copyright © ODS Belgium 2024</Copyright>
 		<Authors>ODS Belgium</Authors>
 		<Platforms>AnyCPU</Platforms>
+		<UseWPF>true</UseWPF>
 	</PropertyGroup>
 
 
